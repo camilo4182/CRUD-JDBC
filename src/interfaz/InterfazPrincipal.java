@@ -5,6 +5,7 @@ import modelo.Curso;
 import modelo.Estudiante;
 import modelo.Matricula;
 import modelo.Profesor;
+import reportes.Reporte;
 
 public class InterfazPrincipal {
 	
@@ -13,6 +14,7 @@ public class InterfazPrincipal {
 	private static Profesor pro = new Profesor();
 	private static Curso cu = new Curso();
 	private static Matricula mat = new Matricula();
+	private static Reporte report = new Reporte();
 
 	public static void main(String[] args) {		
 		try {
@@ -27,6 +29,7 @@ public class InterfazPrincipal {
 		insertarProfesores();
 		insertarCursos();
 		insertarMatriculas();
+		report.queryCursosDeCadaEstudiante(con);
 		con.desconectar();
 	}
 	
