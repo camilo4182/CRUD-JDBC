@@ -10,7 +10,7 @@ public class Curso {
 	
 	private String createStmt = "CREATE TABLE Curso\n" + 
 								"(\n" + 
-								"    nombre VARCHAR(36) NOT NULL,\n" + 
+								"    nombre VARCHAR(40) NOT NULL,\n" + 
 								"    horario VARCHAR(20) NOT NULL,\n" + 
 								"    salon VARCHAR(4) NOT NULL,\n" + 
 								"    profesor VARCHAR(10) NOT NULL,\n" + 

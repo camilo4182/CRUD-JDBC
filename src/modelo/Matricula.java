@@ -11,7 +11,7 @@ public class Matricula {
 	private String createStmt = "CREATE TABLE Matricula\n" + 
 								"(\n" + 
 								"    estudiante VARCHAR(10) NOT NULL,\n" + 
-								"    curso VARCHAR(36) NOT NULL,\n" + 
+								"    curso VARCHAR(40) NOT NULL,\n" + 
 								"    PRIMARY KEY (estudiante, curso),\n" + 
 								"    FOREIGN KEY (estudiante) REFERENCES Estudiante,\n" + 
 								"    FOREIGN KEY (curso) REFERENCES Curso\n" + 
@@ -51,7 +51,7 @@ public class Matricula {
 			pStmt.setString(1, estudiante);
 			pStmt.setString(2, curso);
 			pStmt.executeUpdate();
-			System.out.println("Se insertó la fila (" + estudiante + ", " + curso + ").");
+			System.out.println("Se registró la matricula (" + estudiante + ", " + curso + ").");
 		} catch (SQLException e) {
 			System.out.println("No se pudo insertar la fila (" + estudiante + ", " + curso + ") en la tabla Matricula.");
 		}
